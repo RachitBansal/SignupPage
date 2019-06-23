@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <div id='colchange' style='height: 200px; width: 200px; background:black; color:white'>
+            Change Mah Color
+        </div>
+        <br />
+        <button onclick="changeColor('red','white');">RED</button>
+        <button onclick="changeColor('blue','white');">BLUE</button>
+        <button onclick="changeColor('yellow','black');">YELLOW</button>
+        <br />
+    </body>
+    <script>
+        function changeColor(color,text){
+            document.getElementById('colchange').style.background=color
+            document.getElementById('colchange').style.color=text
+
+            document.getElementById('colchange').innerText = 'YESS'
+        }
+
+    </script>
+</html>

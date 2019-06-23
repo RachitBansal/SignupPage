@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <input id="one" type="Text" placeholder="First" />
+        <input id="two" type="Text" placeholder="Second" />
+        <br />
+        <button onclick="returnProd();" type="submit">Product</button>
+        <button onclick="returnSum();" type="submit">Sum</button>
+        <h3 id='print'>
+            Hi
+        </h3>
+    </body>
+    <script>
+        
+        function returnProd(){
+            var a = document.getElementById("one").value
+            var b = document.getElementById("two").value
+
+            document.getElementById("print").innerHTML = a*b  
+        }
+
+        function returnSum(){
+            var a = Number(document.getElementById("one").value)
+            var b = Number(document.getElementById("two").value)
+
+            document.getElementById("print").innerHTML = a+b 
+        }
+
+    </script>
+</html>

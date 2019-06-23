@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Attendance</title>
+</head>
+<body>
+<h1>Update Attendance</h1>
+<form method="post">
+    Name of Student: <input name="name" />
+    <br />
+    <br />
+    Present <input type='radio' name='att' value='pres' />
+    Absent <input type='radio' name='att' value='abs' />
+    &nbsp; &nbsp;
+    <button type="submit" name="button" value="create">Submit</button>
+</form>
+<table>
+    <tr>
+        <td>S No.</td>
+        <td>Name</td>
+        <td>Present/Absent</td>
+    </tr>
+    <% for(i=0;i<tasks.length;i++){ %>
+    <tr>
+        <td><%=i+1 %></td>
+        <td><%= att[i].name%></td>
+        <td><%= att[i].att%></td>
+    </tr>
+    <%}%>
+</table>
+
+</body>
+</html>

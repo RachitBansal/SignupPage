@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link href='../stuff/css/styles.css' />
+    </head>
+    <body>
+        <table class='table'>
+        <% for(var i=0; i<4; i++){ %>
+            <tr>
+                <% for(var j=0; j<3; j++){ %>
+                    <td>
+                        <%=data[i][j] %>
+                    </td>
+                <% } %>
+            </tr>
+        <% } %>
+        </table>
+    </body>
+</html>

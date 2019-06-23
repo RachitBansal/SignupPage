@@ -29,7 +29,7 @@ const UserSchema = new Schema({
 const User = mongoose.model('User', UserSchema);
 
 app.get('/', (req, res) => {
-    res.render("index")
+    res.render("index (1)")
 })
 app.get('/404', (req, res) => {
     res.send("404 error")
@@ -53,11 +53,11 @@ app.post('/', urlencodedParser, (req, res) => {
                             console.log(err, 'error')
                             return
                         }
-                        res.render('index', { message: "Sign Up Successful. Please log in." })
+                        res.render('index (1)', { message: "Sign Up Successful. Please log in." })
                     });
 
                 } else {
-                    res.render('index', { message: "User already exists" })
+                    res.render('index (1)', { message: "User already exists" })
                 }
             })
             break;
@@ -69,7 +69,7 @@ app.post('/', urlencodedParser, (req, res) => {
                     return
                 }
                 if (_.isEmpty(doc)) {
-                    res.render('index', { message: "Please check email/password" })
+                    res.render('index (1)', { message: "Please check email/password" })
                 } else {
                     req.session.user = doc
                     res.redirect('/user')

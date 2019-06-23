@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <input type='text' placeholder="Enter the number" id='num' />
+        <br />
+        <button id='check' onclick="checkMul();">
+        Check
+        </button>
+        <h3 id='print'>
+
+        </h3>
+    </body>
+    <script>
+        function checkMul(){
+            var a = Number(document.getElementById('num').value)
+            if(a%2==0){
+                document.getElementById('print').innerHTML='Even'
+            }
+            else{
+                document.getElementById('print').innerHTML='Odd'
+            }
+        }
+    </script>
+</html>

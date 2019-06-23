@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            div{
+                height: 100%
+            }
+        </style>
+    </head>
+    <body>
+        <button onClick="slide('prev');">Prev</button>
+        <div style="display: flex; height:200px; width:250px; margin-left: 50px; margin-top: 10px">
+            <div class='slide' style='display: block; width:250px; height:100%; background: blue'></div>
+            <div class='slide' style='display: none; width:250px; height:100%; background: red'></div>
+            <div class='slide' style='display: none; width:250px; height: 100%; background: yellow'></div>
+        </div>
+        <button style='margin-top: 10px' onclick="slide('next');">Next</button>
+        
+    </body>
+    <script>
+        var a = 0
+
+        function slide(str){
+            var slides = document.getElementsByClassName("slide")
+            slides[a].style.display = 'none'
+            len = slides.length
+
+            if(str=='next'){
+                a++
+                if(a+1>len){
+                    a=0 
+                }
+            }
+            else if(str=='prev'){
+                a--
+                if(a<0){ 
+                    a = len-1
+                }
+            }
+            
+            slides[a].style.display = "block"
+        }
+    </script>
+
+</html>
