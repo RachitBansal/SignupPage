@@ -1,13 +1,13 @@
-var express = require("express")
-var app = express()
+// var express = require("express")
+// var app = express()
 
-app.set("view engine", 'ejs')
+// app.set("view engine", 'ejs')
 
-console.log("server has started")
-console.log(__dirname)
+// console.log("server has started")
+// console.log(__dirname)
 
-app.get('/',(req,res) => {
-    res.render('index', {name:'Rachit'})
-})
+// app.get('/',(req,res) => {
+//     res.render('index', {name:'Rachit'})
+// })
 
-app.listen(3001)
+// app.listen(3001)
