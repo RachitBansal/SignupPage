@@ -20,7 +20,7 @@ app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 1160000 } }))
 const secret = 'abcdefg';
 const UserSchema = new Schema({
     email: {
-        type: String,
+        type:p;'-' String,
         unique: true
     },
     password: String

@@ -1,0 +1,26 @@
+#a{
+    width: 100%;
+    height: 30px;
+    background:rgb(57, 89, 175)
+}
+
+#a {
+    animation-name: myanimation;
+    animation-duration: 10s;
+}
+
+@keyframes myanimation {
+    0% {width: 10%; background: lightskyblue; margin-top: 25%}
+    25% {margin-left: 25%}
+    75% {margin-bottom: 25%}
+    100% {width: 100%; margin-right: 25%}
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+    #a{
+        width: 100%;
+        background: pink;
+        color: black;
+        align-content: center
+    }
+}

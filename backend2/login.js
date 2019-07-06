@@ -45,7 +45,7 @@ app.post('/', urlencodedParser, (req, res) => {
                     console.log(err,'error')
                     res.redirect('/')
                     return
-                }
+                }   
                 if(doc==[]) {
                     let instance = new User()
                     instance.email = req.body.email
@@ -53,11 +53,23 @@ app.post('/', urlencodedParser, (req, res) => {
                     instance.cpass = req.body.cpass
                     instance.save(function(err){
                         console.log(err)
-                })
-                res.render('')
+                    })
+                res.render('login',{'message':'Registered, please sign in'})
                 }
-        }
-    )}
+            )}
+        case 'login':
+            User.find({email:req.body.email,pass:req.body.pass},function(err,doc){
+                if(err){
+                    console.log(err,'error')
+                    res.redirect('/')
+                    return
+                }
+                if(doc != []){
+                    res.session.user = doc
+                }
+            })
+
+    }
 })
 
 app.listen(3000, () => {
